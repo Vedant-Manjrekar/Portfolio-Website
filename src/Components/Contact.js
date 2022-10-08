@@ -1,6 +1,5 @@
 import emailjs from "@emailjs/browser";
-import React, { useEffect, useRef, useLayoutEffect } from "react";
-import Loader from "./Loader";
+import React, { useRef } from "react";
 
 function Contact() {
   const refForm = useRef();

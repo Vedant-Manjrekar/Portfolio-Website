@@ -1,5 +1,4 @@
 import React from "react";
-import TypeIt from "typeit-react";
 
 function Home() {
   return (
