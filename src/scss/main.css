@@ -1,0 +1,980 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Overpass:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
+
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #181818;
+  height: 100vh;
+  width: 10vw;
+  position: fixed;
+}
+
+.navbar .logo {
+  width: 3rem;
+  padding: 12px;
+  border-radius: 21rem;
+  margin-top: 1rem;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  margin-bottom: 3rem;
+}
+
+nav a {
+  margin: 1rem 0;
+  color: #333333;
+}
+
+nav a:hover {
+  color: white;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.active {
+  color: white;
+}
+
+.social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  margin-top: auto;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.social-links:hover {
+  color: white;
+}
+
+.social-links i {
+  margin-top: 1rem;
+  color: #333333;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  background-color: #0d192f;
+  font-size: 1.3rem;
+  margin-left: 10vw;
+  padding: 3.2rem 3rem;
+  height: 100vh;
+}
+
+.container .intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 6rem;
+}
+
+.container .intro .salutation {
+  color: white;
+  font-family: monospace;
+  margin-bottom: 2rem;
+  color: #64ffdb;
+  letter-spacing: -1px;
+}
+
+.container .intro .name {
+  font-family: 'Inter', sans-serif;
+  color: #ccd6f6;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.container .intro .highlight {
+  background-color: #f5f5f521;
+  margin-top: 2rem;
+}
+
+.container .intro .sum {
+  font-family: monospace;
+  color: white;
+  margin-top: 3rem;
+  margin-right: 20vw;
+  color: #64ffdb;
+  letter-spacing: -1px;
+}
+
+.container .intro .contact-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 1rem;
+}
+
+.container .intro .contact-me .resume {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.container .intro .contact-me .resume:hover {
+  color: #0d192f;
+}
+
+.container .intro .btn {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-family: monospace;
+  border-radius: 5px;
+  font-size: 2rem;
+  animation: alternate-reverse 1s 1.8s backwards;
+}
+
+.container .intro .btn:hover {
+  background-color: white;
+  color: #0d192f;
+  cursor: pointer;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+
+.about .about-me {
+  margin-left: 10vw;
+  padding: 3.2rem 3rem;
+  background-color: #0d192f;
+}
+
+.about .about-me .roll-in-blurred-left {
+  -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: roll-in-blurred-left 0.65s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.about .about-me .heading {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+}
+
+.about .about-me .small-about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 100;
+  margin: 2rem 0;
+  color: #64ffdb;
+}
+
+.about .about-me .small-about .photo1 {
+  width: 22vw;
+  border-radius: 12px;
+  margin-left: 2rem;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.about .about-me ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 2rem;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  background-color: #0d192f;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
+.projects .proj_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+  font-size: 4rem;
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+  margin-left: 10vw;
+  color: whitesmoke;
+  font-family: 'Inter', sans-serif;
+}
+
+.projects .container_p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  background-color: #0d192f;
+  font-size: 1.3rem;
+  margin-left: 10vw;
+  padding: .2rem 3rem;
+}
+
+.pcr {
+  -webkit-animation: myAnim1 1s ease 0s 1 normal forwards !important;
+          animation: myAnim1 1s ease 0s 1 normal forwards !important;
+}
+
+.project_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #64ffdb;
+  position: -webkit-sticky;
+  position: sticky;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 4rem 0;
+  -webkit-animation: myAnim 1s ease 0s 1 normal forwards;
+          animation: myAnim 1s ease 0s 1 normal forwards;
+}
+
+.project_container .pic {
+  position: relative;
+  width: 20rem;
+  opacity: .5;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.project_container .pic:hover {
+  opacity: 1;
+  z-index: 1;
+}
+
+.project_container .pic_R {
+  position: relative;
+  width: 20rem;
+  opacity: .5;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+  right: 3rem;
+}
+
+.project_container .pic_R:hover {
+  opacity: 1;
+  z-index: 1;
+}
+
+.project_container .descrptn {
+  position: relative;
+  left: -2rem;
+  font-size: 1rem;
+  font-family: 'Overpass', sans-serif;
+  background-color: #181818;
+  padding: 2rem;
+  width: 20vw;
+}
+
+.project_container .descrptn_R {
+  position: relative;
+  left: 6rem;
+  z-index: 1;
+  font-size: 1rem;
+  font-family: 'Overpass', sans-serif;
+  background-color: #181818;
+  padding: 2rem;
+  width: 20vw;
+}
+
+.project_container .sources {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  top: 4rem;
+  right: 10rem;
+}
+
+.project_container .sources a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Overpass', sans-serif;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.project_container .sources_R {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  top: 4rem;
+  right: 10rem;
+}
+
+.project_container .sources_R a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-family: 'Overpass', sans-serif;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: #0d192f;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  margin-left: 10vw;
+  height: stretch;
+  height: 100vh;
+}
+
+.contact .head {
+  color: whitesmoke;
+  font-family: 'Overpass', sans-serif;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  text-align: center;
+  font-size: 5rem;
+  margin-top: 2.5rem;
+}
+
+.contact .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 10vw;
+  gap: 1rem;
+}
+
+.contact .form .name {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact .form .name input {
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
+.contact .form input {
+  height: 8vh;
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.262);
+  border: none;
+  text-indent: 1rem;
+  font-size: 3vh;
+  color: whitesmoke;
+}
+
+.contact .form textarea {
+  border-radius: 6px;
+  background-color: rgba(128, 128, 128, 0.262);
+  border: none;
+  padding: 1rem;
+  color: whitesmoke;
+  font-size: 3vh;
+}
+
+.contact .form .send {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact .form .send button {
+  height: 3rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 10vw;
+  font-size: 1rem;
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+  color: whitesmoke;
+}
+
+.contact .form .send button:hover {
+  color: #0d192f;
+  background-color: whitesmoke;
+}
+
+.fade-in {
+  -webkit-animation: fade-in 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes jump {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  25% {
+    opacity: .5;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition-timing-function: cubic-bezier(0.87, 1.06, 0.51, 1.12);
+            transition-timing-function: cubic-bezier(0.87, 1.06, 0.51, 1.12);
+    -webkit-transition-timing-function: cubic-bezier(0.23, 0.88, 0.86, 0.21);
+            transition-timing-function: cubic-bezier(0.23, 0.88, 0.86, 0.21);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+}
+
+@keyframes jump {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  25% {
+    opacity: .5;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition-timing-function: cubic-bezier(0.87, 1.06, 0.51, 1.12);
+            transition-timing-function: cubic-bezier(0.87, 1.06, 0.51, 1.12);
+    -webkit-transition-timing-function: cubic-bezier(0.23, 0.88, 0.86, 0.21);
+            transition-timing-function: cubic-bezier(0.23, 0.88, 0.86, 0.21);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  margin: auto;
+  left: 5rem;
+  right: 0;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translateY(-20rem);
+          transform: translateY(-20rem);
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  100% {
+    -webkit-transform: translate(24px, 0);
+            transform: translate(24px, 0);
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:40:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation roll-in-blurred-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes roll-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in-blurred-left {
+  0% {
+    -webkit-transform: translateX(-1000px) rotate(-720deg);
+    transform: translateX(-1000px) rotate(-720deg);
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.roll-in-right {
+  -webkit-animation: roll-in-right 2s ease-out both;
+  animation: roll-in-right 2s ease-out both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:50:48
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation roll-in-right
+ * ----------------------------------------
+ */
+@-webkit-keyframes roll-in-right {
+  0% {
+    -webkit-transform: translateX(800px) rotate(540deg);
+    transform: translateX(800px) rotate(540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in-right {
+  0% {
+    -webkit-transform: translateX(800px) rotate(540deg);
+    transform: translateX(800px) rotate(540deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(0deg);
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:44:37
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:55:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes myAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-250px);
+            transform: translateX(-250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes myAnim1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes myAnim1 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(250px);
+            transform: translateX(250px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  -webkit-animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+          animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  -webkit-animation-delay: -0.24s;
+          animation-delay: -0.24s;
+}
+
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  -webkit-animation-delay: -0.12s;
+          animation-delay: -0.12s;
+}
+
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

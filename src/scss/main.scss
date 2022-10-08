@@ -1,0 +1,724 @@
+@mixin flex() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Overpass:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    display: flex;
+}
+
+.layout{
+    display: flex;
+    height: stretch;
+}
+
+.navbar{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    background-color: #181818;
+    height: 100vh;
+    width: 10vw;
+    position: fixed;
+
+    .logo{
+        width: 3rem;
+        padding: 12px;
+        border-radius: 21rem;
+        margin-top: 1rem;
+    }
+
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: stretch;
+    height: stretch;
+    margin-bottom: 3rem;
+
+    a{
+        margin: 1rem 0;
+        color: #333333;
+        
+        &:hover{
+            color: white;
+            transition: .3s ease-in-out;
+        }
+    }
+}
+
+.active{
+    color: white;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: stretch;
+    margin-top: auto;
+    list-style: none;
+    margin-bottom: 1rem;
+
+    &:hover{
+        color: white;
+    }
+    
+    i{
+        margin-top: 1rem;
+        color: #333333;
+    }
+}
+
+.container{
+    @include flex();
+    width: stretch;
+    background-color: #0d192f;
+    font-size: 1.3rem;
+    margin-left: 10vw;
+    padding: 3.2rem 3rem;
+    height: 100vh;
+
+    .intro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 6rem;
+        
+        .salutation{
+            color: white;
+            font-family: monospace;
+            margin-bottom: 2rem;
+            color: #64ffdb;
+            letter-spacing: -1px;
+        }
+    
+        .name{
+            font-family: 'Inter', sans-serif;
+            color: #ccd6f6;
+            font-weight: bold;
+            font-size: 4rem;
+        }
+
+        .highlight{
+            background-color: #f5f5f521;
+            margin-top: 2rem;
+        }
+
+        .sum{
+            font-family: monospace;
+            color: white;
+            margin-top: 3rem;
+            margin-right: 20vw;
+            color: #64ffdb;
+            letter-spacing: -1px;
+        }
+
+        .contact-me{
+            display: flex;
+            justify-content: start;
+            gap: 1rem;
+
+            .resume{
+                text-decoration: none;
+                color: whitesmoke;
+
+                &:hover{
+                    color: #0d192f;
+                }
+            }
+        }
+
+        .btn{
+            color: white;
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 1rem;
+            margin-top: 3rem;
+            font-family: monospace;
+            border-radius: 5px;
+            font-size: 2rem;
+            animation: alternate-reverse 1s 1.8s backwards;
+
+            &:hover{
+                background-color: white;
+                color: #0d192f;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
+
+.about{
+    display: flex;
+    height: 100vh;
+    
+    .about-me{
+        margin-left: 10vw;
+        padding: 3.2rem 3rem;
+        background-color: #0d192f;
+
+        .roll-in-blurred-left {
+            -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+                    animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        }
+        
+        .heading{
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+        }
+        
+        .small-about{
+            display: flex;
+            font-size: 1.5rem;
+            font-family: 'Overpass', sans-serif;
+            font-weight: 100;
+            margin: 2rem 0;
+            color: #64ffdb;
+
+            .photo1{
+                width: 22vw;
+                border-radius: 12px;
+                margin-left: 2rem;
+                transition: 1.5s;
+                transform: scale(1);
+            }
+
+        }
+
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-left: 2rem;
+        }
+
+    }
+}
+
+
+.projects{
+    display: grid;
+    background-color: #0d192f;
+    width: stretch;
+    
+    .proj_head{
+        @include flex();
+        width: stretch;
+        align-items: center;
+        margin-top: 2rem;
+        font-size: 4rem;
+        transform: translateY(2rem);
+        margin-left: 10vw;
+        color: whitesmoke;
+        font-family: 'Inter', sans-serif;
+    }
+    
+    .container_p{
+        @include flex();
+        width: stretch;
+        background-color: #0d192f;
+        font-size: 1.3rem;
+        margin-left: 10vw;
+        padding: .2rem 3rem;
+    }
+    
+}
+
+.pcr{
+    animation: myAnim1 1s ease 0s 1 normal forwards !important;
+}
+
+.project_container{
+    display: flex;
+    align-items: center;
+    color: #64ffdb;
+    position: sticky;
+    width: stretch;
+    justify-content: center;
+    margin: 4rem 0;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+
+    .pic{
+        position: relative;
+        width: 20rem;
+        opacity: .5;
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    .pic_R{
+        position: relative;
+        width: 20rem;
+        opacity: .5;
+        transition: .3s;
+        cursor: pointer;
+        right: 3rem;
+
+        &:hover{
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    .descrptn{
+        position: relative;
+        left: -2rem;
+        font-size: 1rem;
+        font-family: 'Overpass', sans-serif;
+        background-color: #181818;
+        padding: 2rem;
+        width: 20vw;
+    }
+    
+    .descrptn_R{
+        position: relative;
+        left: 6rem;
+        z-index: 1;
+        font-size: 1rem;
+        font-family: 'Overpass', sans-serif;
+        background-color: #181818;
+        padding: 2rem;
+        width: 20vw;
+    }
+
+    .sources{
+        display: flex;
+        gap: 1rem;
+        position: relative;
+        top: 4rem;
+        right: 10rem;
+
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-family: 'Overpass', sans-serif;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    .sources_R{
+        display: flex;
+        gap: 1rem;
+        position: relative;
+        top: 4rem;
+        right: 10rem;
+
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+            font-family: 'Overpass', sans-serif;
+            margin-top: 2rem;
+            cursor: pointer;
+        }
+    }
+
+}
+
+.contact{
+    background-color: #0d192f;
+    width: stretch;
+    height: stretch;
+    margin-left: 10vw;
+    height: stretch;
+    height: 100vh;
+    
+    .head{
+        color: whitesmoke;
+        font-family: 'Overpass', sans-serif;
+        width: stretch;
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 2.5rem;
+    }
+    
+    .form{
+        @include flex();
+        padding: 1rem 10vw;
+        gap: 1rem;
+
+        .name{
+            width: stretch;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+
+            input{
+                width: stretch;
+            }
+
+        }
+
+        input{
+            height: 8vh;
+            border-radius: 6px;
+            background-color: rgba(128, 128, 128, 0.262);
+            border: none;
+            text-indent: 1rem;
+            font-size: 3vh;
+            color: whitesmoke;
+        }
+
+        textarea{
+            border-radius: 6px;
+            background-color: rgba(128, 128, 128, 0.262);
+            border: none;
+            padding: 1rem;
+            color: whitesmoke;
+            font-size: 3vh;
+        }
+
+        .send{
+            display: flex;
+            width: stretch;
+            justify-content: flex-end;
+
+            button{
+                height: 3rem;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 10vw;
+                font-size: 1rem;
+                border: 1px solid whitesmoke;
+                background-color: transparent;
+                color: whitesmoke;
+
+                &:hover{
+                    color: #0d192f;
+                    background-color: whitesmoke;
+                }
+
+            }
+        }
+
+
+    }
+
+}
+
+.fade-in {
+	-webkit-animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@keyframes jump {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        transition: 1.5s;
+        
+    }
+    25%{
+        opacity: .5;
+        transform: scale(1.3);
+        transition: 1.5s;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+        transition-timing-function: cubic-bezier(0.87, 1.06, 0.51, 1.12);
+        transition-timing-function: cubic-bezier(.23,.88,.86,.21);
+        transition: 1.5s;
+    }
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    left: 5rem;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    animation-fill-mode: forwards;
+    transform: translateY(-20rem);
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
+  /* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:40:25
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation roll-in-blurred-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+
+  .roll-in-right {
+	-webkit-animation: roll-in-right 2s ease-out both;
+	        animation: roll-in-right 2s ease-out both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:50:48
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation roll-in-right
+ * ----------------------------------------
+ */
+ @-webkit-keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+              transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-right {
+    0% {
+      -webkit-transform: translateX(800px) rotate(540deg);
+              transform: translateX(800px) rotate(540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  
+  /* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:44:37
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+@-webkit-keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2022-10-6 20:55:22
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-expand {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateX(-250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes myAnim1 {
+	0% {
+		opacity: 0;
+		transform: translateX(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: #fff;
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
