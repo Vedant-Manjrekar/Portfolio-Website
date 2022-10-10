@@ -355,13 +355,13 @@ nav{
         font-family: 'Overpass', sans-serif;
         width: stretch;
         text-align: center;
-        font-size: 5rem;
+        font-size: 3rem;
         margin-top: 2.5rem;
     }
     
     .form{
         @include flex();
-        padding: 1rem 10vw;
+        padding: 1rem 3vw;
         gap: 1rem;
 
         .name{
@@ -382,7 +382,6 @@ nav{
             background-color: rgba(128, 128, 128, 0.262);
             border: none;
             text-indent: 1rem;
-            font-size: 3vh;
             color: whitesmoke;
         }
 
@@ -391,6 +390,7 @@ nav{
             background-color: rgba(128, 128, 128, 0.262);
             border: none;
             padding: 1rem;
+            height: 21vh;
             color: whitesmoke;
             font-size: 3vh;
         }
@@ -404,7 +404,7 @@ nav{
                 height: 3rem;
                 border-radius: 5px;
                 cursor: pointer;
-                width: 10vw;
+                width: 30vw;
                 font-size: 1rem;
                 border: 1px solid whitesmoke;
                 background-color: transparent;
@@ -765,6 +765,10 @@ nav{
     margin-left: .5rem;
     margin-bottom: 1rem;
   }
+
+.contact .form .name {
+  flex-direction: column;  
+}
 
 }
 
