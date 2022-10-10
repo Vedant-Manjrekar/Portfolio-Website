@@ -6,10 +6,13 @@ function Project_container_left({ photo, description, link, github }) {
       <div className="photo">
         <img className="pic" src={photo} alt="photo" />
       </div>
-      <div className="descrptn">{description}</div>
-      <div className="sources">
-        <a href={link}>Link</a>
-        <a href={github}>Github</a>
+      <div className="descrptn">
+        {description}
+
+        <div className="sources">
+          <a href={link}>Link</a>
+          <a href={github}>Github</a>
+        </div>
       </div>
     </div>
   );

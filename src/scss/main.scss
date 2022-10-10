@@ -11,8 +11,13 @@
     padding: 0;
 }
 
+body{
+  height: stretch;
+}
+
 .main{
     display: flex;
+    height: 100vh;
 }
 
 .layout{
@@ -25,17 +30,20 @@
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;
     background-color: #181818;
-    height: 100vh;
+    height: stretch;
     width: 10vw;
     position: fixed;
 
     .logo{
-        width: 3rem;
+        width: 7vw;
         padding: 12px;
         border-radius: 21rem;
         margin-top: 1rem;
     }
-
+    
+    .fa-2x{
+      font-size: 4vw;
+    }
 }
 
 nav{
@@ -46,6 +54,8 @@ nav{
     width: stretch;
     height: stretch;
     margin-bottom: 3rem;
+
+
 
     a{
         margin: 1rem 0;
@@ -84,18 +94,17 @@ nav{
 
 .container{
     @include flex();
-    width: stretch;
     background-color: #0d192f;
     font-size: 1.3rem;
     margin-left: 10vw;
     padding: 3.2rem 3rem;
-    height: 100vh;
+    height: stretch;
+    width: stretch;
 
     .intro{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 6rem;
         
         .salutation{
             color: white;
@@ -121,7 +130,7 @@ nav{
             font-family: monospace;
             color: white;
             margin-top: 3rem;
-            margin-right: 20vw;
+            // margin-right: 20vw;
             color: #64ffdb;
             letter-spacing: -1px;
         }
@@ -164,8 +173,8 @@ nav{
 }
 
 .about{
-    display: flex;
-    height: 100vh;
+    height: auto;
+    width: auto;
     
     .about-me{
         margin-left: 10vw;
@@ -212,7 +221,6 @@ nav{
 
 
 .projects{
-    display: grid;
     background-color: #0d192f;
     width: stretch;
     
@@ -221,7 +229,7 @@ nav{
         width: stretch;
         align-items: center;
         margin-top: 2rem;
-        font-size: 4rem;
+        font-size: 3rem;
         transform: translateY(2rem);
         margin-left: 10vw;
         color: whitesmoke;
@@ -230,11 +238,14 @@ nav{
     
     .container_p{
         @include flex();
+        width: 100vw;
+        width: -moz-available;
         width: stretch;
         background-color: #0d192f;
         font-size: 1.3rem;
         margin-left: 10vw;
-        padding: .2rem 3rem;
+        padding: 3rem;
+        padding-left: 5.2rem;
     }
     
 }
@@ -255,7 +266,7 @@ nav{
 
     .pic{
         position: relative;
-        width: 20rem;
+        width: 45vw;
         opacity: .5;
         transition: .3s;
         cursor: pointer;
@@ -268,7 +279,7 @@ nav{
 
     .pic_R{
         position: relative;
-        width: 20rem;
+        width: 45vw;
         opacity: .5;
         transition: .3s;
         cursor: pointer;
@@ -283,7 +294,7 @@ nav{
     .descrptn{
         position: relative;
         left: -2rem;
-        font-size: 1rem;
+        font-size: 2vw;
         font-family: 'Overpass', sans-serif;
         background-color: #181818;
         padding: 2rem;
@@ -292,9 +303,9 @@ nav{
     
     .descrptn_R{
         position: relative;
-        left: 6rem;
+        left: -1rem;
         z-index: 1;
-        font-size: 1rem;
+        font-size: 2vw;
         font-family: 'Overpass', sans-serif;
         background-color: #181818;
         padding: 2rem;
@@ -305,8 +316,6 @@ nav{
         display: flex;
         gap: 1rem;
         position: relative;
-        top: 4rem;
-        right: 10rem;
 
         a{
             text-decoration: none;
@@ -321,8 +330,6 @@ nav{
         display: flex;
         gap: 1rem;
         position: relative;
-        top: 4rem;
-        right: 10rem;
 
         a{
             text-decoration: none;
@@ -721,4 +728,53 @@ nav{
     top: 24px;
     height: 32px;
   }
+}
+
+@media (min-width: 0px) and (max-width: 500px){
+  .navbar{
+        .fa-2x{
+          font-size: 5.3vw;
+        }
+  }
+
+  .container{
+    width: 100vw;
+    height: 100vh;
+
+    .intro{
+
+      .btn{
+        font-size: 1rem;
+      }
+
+    .name{
+      font-size: 3rem;
+    }
+}
+  }
+
+  .projects .proj_head {
+    font-size: 2rem;
+  }
+
+  .about .about-me .small-about {
+    flex-direction: column-reverse;
+  }
+
+  .about .about-me .small-about .photo1 {
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media (min-width: 500px) and (max-width: 788px){
+  .container .intro .name {
+    font-size: 2.5rem;
+}
+
+.container .intro .btn{
+    font-size: 1.5rem;
+}
+
 }

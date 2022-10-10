@@ -49,8 +49,6 @@ function Home() {
                 .pause(500)
                 .type("Front-end / Back-end / MERN Stack.");
 
-              //   instance.reset();
-
               return instance;
             }}
           />
@@ -58,8 +56,8 @@ function Home() {
 
         <div className="contact-me">
           <button className="btn">
-            <a href="/contact" className="resume">
-              Contact Me
+            <a href="/projects" className="resume">
+              Projects
             </a>
           </button>
           <button className="btn">

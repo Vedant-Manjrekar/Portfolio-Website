@@ -4,10 +4,17 @@
   padding: 0;
 }
 
+body {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
 }
 
 .layout {
@@ -28,16 +35,22 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #181818;
-  height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
   width: 10vw;
   position: fixed;
 }
 
 .navbar .logo {
-  width: 3rem;
+  width: 7vw;
   padding: 12px;
   border-radius: 21rem;
   margin-top: 1rem;
+}
+
+.navbar .fa-2x {
+  font-size: 4vw;
 }
 
 nav {
@@ -120,14 +133,16 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: -webkit-fill-available;
-  width: -moz-available;
-  width: stretch;
   background-color: #0d192f;
   font-size: 1.3rem;
   margin-left: 10vw;
   padding: 3.2rem 3rem;
-  height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
 }
 
 .container .intro {
@@ -141,7 +156,6 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0 6rem;
 }
 
 .container .intro .salutation {
@@ -168,7 +182,6 @@ nav a:hover {
   font-family: monospace;
   color: white;
   margin-top: 3rem;
-  margin-right: 20vw;
   color: #64ffdb;
   letter-spacing: -1px;
 }
@@ -211,10 +224,8 @@ nav a:hover {
 }
 
 .about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100vh;
+  height: auto;
+  width: auto;
 }
 
 .about .about-me {
@@ -264,8 +275,6 @@ nav a:hover {
 }
 
 .projects {
-  display: -ms-grid;
-  display: grid;
   background-color: #0d192f;
   width: -webkit-fill-available;
   width: -moz-available;
@@ -290,7 +299,7 @@ nav a:hover {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   -webkit-transform: translateY(2rem);
           transform: translateY(2rem);
   margin-left: 10vw;
@@ -309,13 +318,15 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: -webkit-fill-available;
+  width: 100vw;
   width: -moz-available;
+  width: -webkit-fill-available;
   width: stretch;
   background-color: #0d192f;
   font-size: 1.3rem;
   margin-left: 10vw;
-  padding: .2rem 3rem;
+  padding: 3rem;
+  padding-left: 5.2rem;
 }
 
 .pcr {
@@ -346,7 +357,7 @@ nav a:hover {
 
 .project_container .pic {
   position: relative;
-  width: 20rem;
+  width: 45vw;
   opacity: .5;
   -webkit-transition: .3s;
   transition: .3s;
@@ -360,7 +371,7 @@ nav a:hover {
 
 .project_container .pic_R {
   position: relative;
-  width: 20rem;
+  width: 45vw;
   opacity: .5;
   -webkit-transition: .3s;
   transition: .3s;
@@ -376,7 +387,7 @@ nav a:hover {
 .project_container .descrptn {
   position: relative;
   left: -2rem;
-  font-size: 1rem;
+  font-size: 2vw;
   font-family: 'Overpass', sans-serif;
   background-color: #181818;
   padding: 2rem;
@@ -385,9 +396,9 @@ nav a:hover {
 
 .project_container .descrptn_R {
   position: relative;
-  left: 6rem;
+  left: -1rem;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 2vw;
   font-family: 'Overpass', sans-serif;
   background-color: #181818;
   padding: 2rem;
@@ -400,8 +411,6 @@ nav a:hover {
   display: flex;
   gap: 1rem;
   position: relative;
-  top: 4rem;
-  right: 10rem;
 }
 
 .project_container .sources a {
@@ -418,8 +427,6 @@ nav a:hover {
   display: flex;
   gap: 1rem;
   position: relative;
-  top: 4rem;
-  right: 10rem;
 }
 
 .project_container .sources_R a {
@@ -975,6 +982,44 @@ nav a:hover {
   50%, 100% {
     top: 24px;
     height: 32px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 500px) {
+  .navbar .fa-2x {
+    font-size: 5.3vw;
+  }
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .intro .btn {
+    font-size: 1rem;
+  }
+  .container .intro .name {
+    font-size: 3rem;
+  }
+  .projects .proj_head {
+    font-size: 2rem;
+  }
+  .about .about-me .small-about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .about .about-me .small-about .photo1 {
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 788px) {
+  .container .intro .name {
+    font-size: 2.5rem;
+  }
+  .container .intro .btn {
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
