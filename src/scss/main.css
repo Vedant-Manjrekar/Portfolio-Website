@@ -8,6 +8,8 @@ body {
   height: -webkit-fill-available;
   height: -moz-available;
   height: stretch;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .main {
@@ -143,6 +145,8 @@ nav a:hover {
   width: -webkit-fill-available;
   width: -moz-available;
   width: stretch;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .container .intro {
@@ -224,6 +228,8 @@ nav a:hover {
 }
 
 .about {
+  -webkit-transition: .5s;
+  transition: .5s;
   height: auto;
   width: auto;
 }
@@ -275,6 +281,8 @@ nav a:hover {
 }
 
 .projects {
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: #0d192f;
   width: -webkit-fill-available;
   width: -moz-available;
@@ -335,6 +343,8 @@ nav a:hover {
 }
 
 .project_container {
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,6 +448,8 @@ nav a:hover {
 }
 
 .contact {
+  -webkit-transition: .5s;
+  transition: .5s;
   background-color: #0d192f;
   width: -webkit-fill-available;
   width: -moz-available;

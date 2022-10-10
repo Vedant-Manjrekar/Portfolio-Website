@@ -13,6 +13,7 @@
 
 body{
   height: stretch;
+  transition: .5s;
 }
 
 .main{
@@ -100,6 +101,7 @@ nav{
     padding: 3.2rem 3rem;
     height: stretch;
     width: stretch;
+    transition: .5s;
 
     .intro{
         display: flex;
@@ -173,6 +175,7 @@ nav{
 }
 
 .about{
+    transition: .5s;
     height: auto;
     width: auto;
     
@@ -221,6 +224,7 @@ nav{
 
 
 .projects{
+    transition: .5s;
     background-color: #0d192f;
     width: stretch;
     
@@ -255,6 +259,7 @@ nav{
 }
 
 .project_container{
+    transition: .5s;
     display: flex;
     align-items: center;
     color: #64ffdb;
@@ -343,6 +348,7 @@ nav{
 }
 
 .contact{
+  transition: .5s;
     background-color: #0d192f;
     width: stretch;
     height: stretch;
