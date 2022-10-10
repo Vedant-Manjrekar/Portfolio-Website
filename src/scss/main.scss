@@ -27,6 +27,7 @@ body{
 }
 
 .navbar{
+    transition: .5s;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: center;

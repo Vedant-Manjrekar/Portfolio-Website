@@ -29,6 +29,8 @@ body {
 }
 
 .navbar {
+  -webkit-transition: .5s;
+  transition: .5s;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 1fr 1fr;
