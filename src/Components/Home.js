@@ -1,6 +1,6 @@
 import React from "react";
 import TypeIt from "typeit-react";
-import resume from "../assets/Resume-Vedant.pdf";
+import resume from "../assets/resume_vedant.pdf";
 
 function Home() {
   return (
