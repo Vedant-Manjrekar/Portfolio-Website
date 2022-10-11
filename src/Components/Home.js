@@ -1,5 +1,6 @@
 import React from "react";
 import TypeIt from "typeit-react";
+import resume from "../assets/Resume-Vedant.pdf";
 
 function Home() {
   return (
@@ -61,7 +62,7 @@ function Home() {
             </a>
           </button>
           <button className="btn">
-            <a className="resume" href="/">
+            <a className="resume" href={resume}>
               Resume
             </a>
           </button>
