@@ -11,14 +11,21 @@
     padding: 0;
 }
 
+html{
+  height: stretch;
+  width: stretch;
+}
+
 body{
   height: stretch;
+  width: 100vw;
   transition: .5s;
 }
 
 .main{
     display: flex;
-    height: 100vh;
+    height: 100vh !important;
+    width: 100vw !important;
 }
 
 .layout{
@@ -99,10 +106,19 @@ nav{
     background-color: #0d192f;
     font-size: 1.3rem;
     margin-left: 10vw;
-    padding: 3.2rem 3rem;
+    padding: 3.2rem 7rem;
     height: stretch;
     width: stretch;
     transition: .5s;
+    position: relative;
+    z-index: 1;
+
+    .pc_logo{
+      width: 23rem;
+      position: fixed;
+      z-index: -1;
+      transform: translate(45vw, -13rem);
+    }
 
     .intro{
         display: flex;
@@ -127,6 +143,7 @@ nav{
         .highlight{
             background-color: #f5f5f521;
             margin-top: 2rem;
+            width: fit-content;
         }
 
         .sum{
@@ -175,10 +192,33 @@ nav{
 
 }
 
+.bracket{
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: 'Overpass', sans-serif;
+  font-family: monospace;
+  font-size: 2rem;
+  // font-style: italic;
+}
+
+.about-content{
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+}
+
+.line{
+  height: stretch;
+  width: 2px;
+  border: 1px transparent rgba(128, 128, 128, 0.422);
+  background-color: rgba(128, 128, 128, 0.422);
+  margin-right: 2rem;
+}
+
 .about{
     transition: .5s;
-    height: auto;
-    width: auto;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     
     .about-me{
         margin-left: 10vw;
@@ -738,6 +778,12 @@ nav{
 }
 
 @media (min-width: 0px) and (max-width: 500px){
+
+  .about .about-me ul {
+    font-size: 1rem;
+    transform: translateX(-1rem);
+  }
+
   .navbar{
         .fa-2x{
           font-size: 5.3vw;
@@ -788,11 +834,34 @@ nav{
     font-size: 1.5rem;
 }
 
+.pc_logo{
+  transform: translate(34vw, -13rem);
+}
+
 }
 
 @media (min-width: 931px){
-
+  
   .navbar .fa-2x{
     font-size: 2.5vw;
   } 
+}
+
+@media(min-width: 1000px) and (max-width: 1100px){
+  .pc_logo{
+    transform: translate(51vw, -14rem) !important;
+  }
+}
+
+@media(min-width: 1200px){
+  
+    .container{
+      padding: 3.2rem 16rem;
+    }
+}
+
+@media(min-width: 788px) and (max-width: 883px){
+  .container .intro .name {
+    font-size: 2.5rem;
+}
 }

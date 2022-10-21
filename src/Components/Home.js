@@ -1,10 +1,12 @@
 import React from "react";
 import TypeIt from "typeit-react";
+import pc from "../assets/Compt4.png";
 import resume from "../assets/resume_vedant.pdf";
 
 function Home() {
   return (
     <div className="container">
+      <img src={pc} alt="pc_logo" className="pc_logo" />
       <div className="intro">
         <p className="salutation" id="salutation">
           <TypeIt

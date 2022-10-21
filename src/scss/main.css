@@ -4,10 +4,20 @@
   padding: 0;
 }
 
+html {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: stretch;
+}
+
 body {
   height: -webkit-fill-available;
   height: -moz-available;
   height: stretch;
+  width: 100vw;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -16,7 +26,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 
 .layout {
@@ -140,7 +151,7 @@ nav a:hover {
   background-color: #0d192f;
   font-size: 1.3rem;
   margin-left: 10vw;
-  padding: 3.2rem 3rem;
+  padding: 3.2rem 7rem;
   height: -webkit-fill-available;
   height: -moz-available;
   height: stretch;
@@ -149,6 +160,16 @@ nav a:hover {
   width: stretch;
   -webkit-transition: .5s;
   transition: .5s;
+  position: relative;
+  z-index: 1;
+}
+
+.container .pc_logo {
+  width: 23rem;
+  position: fixed;
+  z-index: -1;
+  -webkit-transform: translate(45vw, -13rem);
+          transform: translate(45vw, -13rem);
 }
 
 .container .intro {
@@ -182,6 +203,9 @@ nav a:hover {
 .container .intro .highlight {
   background-color: #f5f5f521;
   margin-top: 2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .container .intro .sum {
@@ -229,11 +253,41 @@ nav a:hover {
   cursor: pointer;
 }
 
+.bracket {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: 'Overpass', sans-serif;
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+.about-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0fr 1fr;
+      grid-template-columns: 0fr 1fr;
+}
+
+.line {
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: stretch;
+  width: 2px;
+  border: 1px transparent rgba(128, 128, 128, 0.422);
+  background-color: rgba(128, 128, 128, 0.422);
+  margin-right: 2rem;
+}
+
 .about {
   -webkit-transition: .5s;
   transition: .5s;
-  height: auto;
-  width: auto;
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 
 .about .about-me {
@@ -1000,6 +1054,11 @@ nav a:hover {
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
+  .about .about-me ul {
+    font-size: 1rem;
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
+  }
   .navbar .fa-2x {
     font-size: 5.3vw;
   }
@@ -1041,11 +1100,34 @@ nav a:hover {
   .container .intro .btn {
     font-size: 1.5rem;
   }
+  .pc_logo {
+    -webkit-transform: translate(34vw, -13rem);
+            transform: translate(34vw, -13rem);
+  }
 }
 
 @media (min-width: 931px) {
   .navbar .fa-2x {
     font-size: 2.5vw;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1100px) {
+  .pc_logo {
+    -webkit-transform: translate(51vw, -14rem) !important;
+            transform: translate(51vw, -14rem) !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    padding: 3.2rem 16rem;
+  }
+}
+
+@media (min-width: 788px) and (max-width: 883px) {
+  .container .intro .name {
+    font-size: 2.5rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
